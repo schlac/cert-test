@@ -1,0 +1,93 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=DE, O=schlac, OU=schlac-test, CN=schlac-test TLS CA
+        Validity
+            Not Before: Sep 12 09:43:58 2022 GMT
+            Not After : Sep 11 09:43:58 2024 GMT
+        Subject: C=DE, O=schlac, OU=schlac-test, CN=schlac-test Server
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:aa:a3:75:09:6c:da:cd:42:1d:97:00:fd:10:28:
+                    21:5c:a4:bd:50:ba:8d:fb:a2:a3:ff:ab:ec:25:83:
+                    ba:e5:bd:d8:36:69:4a:bb:30:14:a1:35:1d:3c:28:
+                    17:10:de:d9:08:05:e3:e3:70:dd:eb:3f:cd:2d:ac:
+                    eb:ab:c8:9e:89:75:66:e7:d8:f3:b2:df:fc:28:23:
+                    bb:7c:41:9c:cb:7d:e8:5d:ad:99:fc:9e:e2:1a:3a:
+                    19:a3:b0:ca:e1:f9:e7:a0:52:5f:63:42:ad:3e:8e:
+                    5a:3b:f9:60:98:48:05:5e:6c:d7:e6:38:47:23:6a:
+                    ea:b1:03:bb:a0:c7:59:2e:7d:34:b7:0f:8a:a3:18:
+                    f7:d8:49:21:2d:c5:fa:9a:5c:35:6e:fd:0c:1d:26:
+                    55:f5:73:ab:fd:70:14:2b:1f:8d:ac:eb:c2:74:72:
+                    13:ad:19:d4:ee:63:8a:97:8a:fd:e7:4e:9e:02:f6:
+                    49:f5:d3:c0:7d:72:f7:7e:ae:0c:79:19:2f:d0:44:
+                    eb:cb:0c:d3:19:38:fe:de:cb:2d:98:4c:b6:70:96:
+                    8a:5c:15:20:e9:e8:27:65:85:17:2e:09:87:f2:25:
+                    89:ef:c6:40:a8:18:be:54:8c:a0:90:f8:fd:4e:c0:
+                    c6:1a:03:de:69:e7:db:16:df:b0:cb:53:bd:27:62:
+                    85:bf
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Subject Key Identifier: 
+                45:3A:B1:3A:F5:D2:CD:A8:4C:1E:4E:EE:02:41:56:98:5F:98:64:40
+            X509v3 Authority Key Identifier: 
+                EA:41:36:91:DB:AE:5E:03:34:B7:2F:CA:46:BD:81:27:F0:68:10:B3
+            Authority Information Access: 
+                CA Issuers - URI:http://localhost:8080/tls-ca.cer
+            X509v3 CRL Distribution Points: 
+                Full Name:
+                  URI:http://localhost:8080/tls-ca.crl
+            X509v3 Subject Alternative Name: 
+                DNS:schlac.test
+    Signature Algorithm: sha1WithRSAEncryption
+    Signature Value:
+        b3:c0:5c:aa:c8:b6:24:cd:ef:cb:ef:87:a3:38:c4:4f:32:2e:
+        ef:1d:13:ee:c4:12:91:56:0b:99:94:d5:62:17:40:7f:bc:1f:
+        62:61:25:97:1e:81:13:03:5b:d1:42:4b:03:51:a5:98:9e:77:
+        15:00:d8:4a:02:90:f5:95:08:c8:88:19:37:c8:ba:c5:ba:08:
+        96:67:5e:1b:42:76:ea:87:c3:46:f7:47:02:94:ba:6e:ed:c0:
+        99:8b:61:d5:59:24:d9:3c:ca:7e:7b:ce:cc:a5:a4:7e:47:26:
+        e8:c1:03:4c:01:72:04:a0:3e:90:3f:89:d8:b3:a0:e6:dc:52:
+        bc:6f:3f:59:a1:19:9d:59:8e:47:d0:3e:40:09:72:19:26:4a:
+        49:fb:e7:47:a4:c0:aa:0c:ea:a4:59:bd:8a:52:5e:08:9d:ce:
+        31:8a:d0:a3:a8:d2:4f:f2:d4:af:ca:79:a5:55:76:1d:95:6c:
+        57:85:a6:7b:8a:a5:95:25:da:f6:9c:0c:69:0e:32:72:fb:98:
+        e2:0f:8b:f7:83:7d:b5:d4:85:df:11:c5:f8:9d:ce:a5:52:79:
+        97:13:89:96:eb:4b:3e:9b:40:2e:e3:09:e7:a1:ae:ed:c8:eb:
+        37:54:6d:d4:fa:cd:2e:ea:13:85:64:13:b2:c0:9d:f3:31:85:
+        89:85:89:af
+-----BEGIN CERTIFICATE-----
+MIIEJjCCAw6gAwIBAgIBATANBgkqhkiG9w0BAQUFADBRMQswCQYDVQQGEwJERTEP
+MA0GA1UECgwGc2NobGFjMRQwEgYDVQQLDAtzY2hsYWMtdGVzdDEbMBkGA1UEAwwS
+c2NobGFjLXRlc3QgVExTIENBMB4XDTIyMDkxMjA5NDM1OFoXDTI0MDkxMTA5NDM1
+OFowUTELMAkGA1UEBhMCREUxDzANBgNVBAoMBnNjaGxhYzEUMBIGA1UECwwLc2No
+bGFjLXRlc3QxGzAZBgNVBAMMEnNjaGxhYy10ZXN0IFNlcnZlcjCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAKqjdQls2s1CHZcA/RAoIVykvVC6jfuio/+r
+7CWDuuW92DZpSrswFKE1HTwoFxDe2QgF4+Nw3es/zS2s66vInol1ZufY87Lf/Cgj
+u3xBnMt96F2tmfye4ho6GaOwyuH556BSX2NCrT6OWjv5YJhIBV5s1+Y4RyNq6rED
+u6DHWS59NLcPiqMY99hJIS3F+ppcNW79DB0mVfVzq/1wFCsfjazrwnRyE60Z1O5j
+ipeK/edOngL2SfXTwH1y936uDHkZL9BE68sM0xk4/t7LLZhMtnCWilwVIOnoJ2WF
+Fy4Jh/Ilie/GQKgYvlSMoJD4/U7AxhoD3mnn2xbfsMtTvSdihb8CAwEAAaOCAQcw
+ggEDMA4GA1UdDwEB/wQEAwIFoDAJBgNVHRMEAjAAMB0GA1UdJQQWMBQGCCsGAQUF
+BwMBBggrBgEFBQcDAjAdBgNVHQ4EFgQURTqxOvXSzahMHk7uAkFWmF+YZEAwHwYD
+VR0jBBgwFoAU6kE2kduuXgM0ty/KRr2BJ/BoELMwPAYIKwYBBQUHAQEEMDAuMCwG
+CCsGAQUFBzAChiBodHRwOi8vbG9jYWxob3N0OjgwODAvdGxzLWNhLmNlcjAxBgNV
+HR8EKjAoMCagJKAihiBodHRwOi8vbG9jYWxob3N0OjgwODAvdGxzLWNhLmNybDAW
+BgNVHREEDzANggtzY2hsYWMudGVzdDANBgkqhkiG9w0BAQUFAAOCAQEAs8Bcqsi2
+JM3vy++HozjETzIu7x0T7sQSkVYLmZTVYhdAf7wfYmEllx6BEwNb0UJLA1GlmJ53
+FQDYSgKQ9ZUIyIgZN8i6xboIlmdeG0J26ofDRvdHApS6bu3AmYth1Vkk2TzKfnvO
+zKWkfkcm6MEDTAFyBKA+kD+J2LOg5txSvG8/WaEZnVmOR9A+QAlyGSZKSfvnR6TA
+qgzqpFm9ilJeCJ3OMYrQo6jST/LUr8p5pVV2HZVsV4Wme4qllSXa9pwMaQ4ycvuY
+4g+L94N9tdSF3xHF+J3OpVJ5lxOJlutLPptALuMJ56Gu7cjrN1Rt1PrNLuoThWQT
+ssCd8zGFiYWJrw==
+-----END CERTIFICATE-----
