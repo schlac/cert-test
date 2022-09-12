@@ -1,4 +1,18 @@
-generate:
+verify:
+	openssl verify -verbose -CRLfile static/tls-ca.crl -extended_crl -crl_check -show_chain -CAfile static/root-ca.crt -untrusted static/tls-ca.crt static/schlac.test.crt
+
+revoke:
+	openssl ca -config etc/tls-ca.conf -revoke static/schlac.test.crt -crl_reason affiliationChanged
+	openssl ca -gencrl -config etc/tls-ca.conf -out crl/tls-ca.crl
+
+serve:
+	mkdir -p static
+	find . \( -name *.crt -o -name *.cer -o -name *.crl \) -exec sh -c 'echo {}; cp {} ./static/' \;
+	
+	-podman stop cert-nginx
+	podman run --rm --name cert-nginx -d -p 8080:80 -v "./static:/usr/share/nginx/html:Z" nginx
+
+generate: clean
 	mkdir -p ca/root-ca/private ca/root-ca/db crl certs
 	chmod 700 ca/root-ca/private
 	touch ca/root-ca/db/root-ca.db ca/root-ca/db/root-ca.db.attr
@@ -22,20 +36,12 @@ generate:
 	
 	SAN=DNS:schlac.test openssl req -new -config etc/server.conf -out certs/schlac.test.csr -keyout certs/schlac.test.key
 	openssl ca -config etc/tls-ca.conf -in certs/schlac.test.csr -out certs/schlac.test.crt -extensions server_ext
-
-serve:
-	mkdir -p static
-	find . \( -name *.crt -o -name *.cer -o -name *.crl \) -exec sh -c 'echo {}; cp {} ./static/' \;
-	
-	podman run --rm --name cert-nginx -d -p 8080:80 -v "$(realpath static):/usr/share/nginx/html:Z" nginx
-
-verify:
-	openssl verify -verbose -issuer_checks -crl_download -crl_check -CAfile ca/root-ca.crt -untrusted ca/tls-ca.crt certs/schlac.test.crt
+	openssl x509 -in ca/tls-ca.crt -out ca/tls-ca.cer -outform der
 
 clean:
-	podman stop cert-nginx
-	[ -e ca ] && rm -r ca
-	[ -e crl ] && rm -r crl
-	[ -e certs ] && rm -r certs
-	[ -d static ] && rm -r static
+	-podman stop cert-nginx
+	-rm -r ca
+	-rm -r crl
+	-rm -r certs
+	-rm -r static
 
